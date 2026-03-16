@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="stylesheet" href="2.css" />
+        <Title>حـــــمـــاده</Title>
+
+        <meta name="description" content="الموقع الرسمي لـ HAMADA - صفحة الروابط الشخصية وروابط التواصل الاجتماعي.">
+        <meta name="keywords" content="HAMADA, موقع شخصي, لينكات, HTML, CSS, Gaming, حماده, حمادة">
+        <meta name="author" content="HAMADA">
+        <link rel="canonical" href="https://yourname.github.io">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" type="Image/x-icon" href="favicone.ico">
+    </head>
+    <body>
+        <div class="cursor"></div>
+        <div id="loader">
+  <h1 class="loader-text">
+    <span>H</span>
+    <span>A</span>
+    <span>M</span>
+    <span>A</span>
+    <span>D</span>
+    <span>A</span>
+  </h1>
+</div>
+
+        <header>
+            <a href="#" class="Logo" class="pulsate-fwd-normal">HAMADA</a>
+            <i class="fa-solid fa-bars menu-icon"></i>
+            <nav>
+                <a href="index.html" class="Active">Home</a>
+                
+                <a href="about.html" >About</a>
+
+                <a href="contact.html" >Contact</a>
+            </nav>
+        </header>
+        <section class="home">
+            <div class="home-img">
+                <img src="صــــــــــور/main.jpg" alt="">
+            </div>
+            <div class="Home-content">
+                <h1>Hi, It's <span>HAMADA</span></h1>
+                <h3 class="typing-text">I'm a <span></span></h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus labore dolores esse. Odit similique doloribus tenetur doloremque, sunt commodi in ipsa repudiandae debitis deleniti blanditiis quibusdam quaerat neque asperiores ea.</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/mohamed-ahmed-328ab337b"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Mohamed02808"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://x.com/2_F5AMA"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+                <a href="#" class="btn">Hire me</a>
+            </div>
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+     <div id="particles-js"></div>
+     <script src="3.js"></script>
+     <script>
+        particlesJS("particles-js", {
+        particles: {
+        number: { value: 40 },
+        size: { value: 3 },
+        move: { speed: 2 },
+        line_linked: {
+        enable: true,
+        distance: 150
+        }
+        }
+        });
+        </script>
+        <script>
+        let menu = document.querySelector(".menu-icon");
+        let nav = document.querySelector("nav");
+
+        menu.onclick = () => {
+        nav.classList.toggle("active");
+        };
+        </script>
+        <section class="home" data-aos="fade-up"></section>
+
+        <script>
+window.addEventListener("load", function(){
+    setTimeout(function(){
+        document.getElementById("loader").classList.add("fade-out");
+    }, 2000); // بعد ظهور HAMADA
+    setTimeout(function(){
+        document.getElementById("loader").style.display = "none";
+    }, 2700);
+});
+</script>
+    </body>
+</html>

@@ -1,261 +1,220 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
+body {
+  font-family: sans-serif;
 
-font-family:sans-serif;
+  background: linear-gradient(135deg, #0a0a0a, #494949);
 
-background:linear-gradient(135deg,#0a0a0a,#494949);
+  height: 100vh;
 
-height:100vh;
+  display: flex;
 
-display:flex;
+  flex-direction: column;
 
-flex-direction:column;
+  align-items: center;
 
-align-items:center;
+  color: white;
 
-color:white;
+  overflow: hidden;
 
-overflow:hidden;
-
-cursor:none;
-
+  cursor: none;
 }
 
 /* الاسم */
 
-header{
+header {
+  width: 100%;
 
-width:100%;
+  text-align: center;
 
-text-align:center;
-
-margin-top:50px;
-
+  margin-top: 50px;
 }
 
-.title{
+.title {
+  font-family: "Orbitron", sans-serif;
 
-font-family:'Orbitron',sans-serif;
+  font-size: 48px;
 
-font-size:48px;
+  letter-spacing: 6px;
 
-letter-spacing:6px;
+  color: white;
 
-color:white;
-
-text-shadow:
-
-0 0 10px #ff0000,
-0 0 30px #ff0000,
-0 0 60px #ff0000;
-
+  text-shadow:
+    0 0 10px #ff0000,
+    0 0 30px #ff0000,
+    0 0 60px #ff0000;
 }
 
 /* مركز الزراير */
 
-main{
+main {
+  flex: 1;
 
-flex:1;
+  display: flex;
 
-display:flex;
+  align-items: center;
 
-align-items:center;
+  justify-content: center;
 
-justify-content:center;
-
-width:100%;
-
+  width: 100%;
 }
 
 /* links */
 
-#links{
+#links {
+  display: flex;
 
-display:flex;
+  flex-direction: column;
 
-flex-direction:column;
-
-gap:16px;
-
+  gap: 16px;
 }
 
 /* زرار glass */
 
-.btn{
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 
-display:flex;
-align-items:center;
-justify-content:center;
-gap:10px;
+  width: 230px;
+  padding: 12px;
 
-width:230px;
-padding:12px;
+  border-radius: 16px;
 
-border-radius:16px;
+  text-decoration: none;
 
-text-decoration:none;
+  color: white;
 
-color:white;
+  font-size: 16px;
 
-font-size:16px;
+  /* glass effect */
 
-/* glass effect */
+  background: rgba(255, 255, 255, 0.08);
 
-background:rgba(255,255,255,0.08);
+  backdrop-filter: blur(3px) saturate(100%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
 
-backdrop-filter:blur(3px) saturate(100%);
--webkit-backdrop-filter:blur(18px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 
-border:1px solid rgba(255,255,255,0.18);
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.4),
+    inset 0 1px rgba(255, 255, 255, 0.25);
 
-box-shadow:
-0 4px 20px rgba(0,0,0,0.4),
-inset 0 1px rgba(255,255,255,0.25);
+  transition: 0.25s;
 
-transition:0.25s;
+  position: relative;
 
-position:relative;
-
-overflow:hidden;
-
+  overflow: hidden;
 }
-
-
 
 /* ايقونات */
 
-.btn i{
-
-font-size:18px;
-
+.btn i {
+  font-size: 18px;
 }
 
 /* hover */
 
-.btn:hover{
-
-cursor: none;    
-transform: scale(1.1) rotate(2deg);
-    background-color: #ff0000;
-    color: black;
-    box-shadow: 0 0 45px #b74b4b;
-
+.btn:hover {
+  cursor: none;
+  transform: scale(1.1) rotate(2deg);
+  background-color: #ff0000;
+  color: black;
+  box-shadow: 0 0 45px #b74b4b;
 }
 
 /* cursor */
 
-.cursor{
+.cursor {
+  position: fixed;
 
-position:fixed;
+  width: 18px;
 
-width:18px;
+  height: 18px;
 
-height:18px;
+  border-radius: 50%;
 
-border-radius:50%;
+  background: #ff0000;
 
-background:#ff0000;
+  pointer-events: none;
 
-pointer-events:none;
+  z-index: 999;
 
-z-index:999;
+  box-shadow:
+    0 0 10px #ff0000,
+    0 0 25px #ff0000,
+    0 0 40px #ff0000;
 
-box-shadow:
-
-0 0 10px #ff0000,
-0 0 25px #ff0000,
-0 0 40px #ff0000;
-
-transform:translate(-50%,-50%);
-
+  transform: translate(-50%, -50%);
 }
 
 /* responsive */
 
-@media(max-width:768px){
+@media (max-width: 768px) {
+  .title {
+    font-size: 36px;
+  }
 
-.title{
+  .btn {
+    width: 200px;
 
-font-size:36px;
-
+    font-size: 15px;
+  }
 }
 
-.btn{
+@media (max-width: 480px) {
+  .title {
+    font-size: 30px;
+  }
 
-width:200px;
-
-font-size:15px;
-
+  .btn {
+    width: 180px;
+  }
 }
 
+.btn:active {
+  transform: scale(0.96);
+
+  background: rgba(255, 255, 255, 0.15);
 }
 
-@media(max-width:480px){
+#particles-js {
+  position: fixed;
 
-.title{
+  top: 0;
+  left: 0;
 
-font-size:30px;
+  width: 100%;
+  height: 100%;
 
+  z-index: -1;
+
+  background: #0a0a0a;
 }
 
-.btn{
-
-width:180px;
-
-}
-
-}
-
-.btn:active{
-
-transform:scale(0.96);
-
-background:rgba(255,255,255,0.15);
-
-}
-
-#particles-js{
-
-position:fixed;
-
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-z-index:-1;
-
-background:#0a0a0a;
-
-}
-
-.logo-glow{
-  font-family:'Orbitron',sans-serif;
-  font-size:48px;
-  text-decoration:none;
-  color:white;
+.logo-glow {
+  font-family: "Orbitron", sans-serif;
+  font-size: 48px;
+  text-decoration: none;
+  color: white;
   transition: all 0.45s ease; /* حركة أنعم */
-  display:inline-block;
+  display: inline-block;
 }
 
-.logo-glow:hover{
-  color:#ff0000;
+.logo-glow:hover {
+  color: #ff0000;
   text-shadow:
     0 0 6px #ff0000,
     0 0 12px #ff0000,
     0 0 20px #ff0000;
-  transform:scale(1.1);
+  transform: scale(1.1);
 }
 
-*{
-cursor:none;
+* {
+  cursor: none;
 }
-
-
-

@@ -1,73 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
+    <title>تــواصــــــل</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="2contact.css" />
 
-<title>تــواصــــــل</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
-<link rel="stylesheet" href="2contact.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <body>
+    <div class="cursor"></div>
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <canvas id="particles"></canvas>
 
-</head>
+    <div id="particles-js"></div>
 
-<body>
+    <header>
+      <h1 class="title">
+        <a href="index.html" class="logo-glow" data-text="HAMADA">HAMADA</a>
+      </h1>
+    </header>
 
-<div class="cursor"></div>
+    <main>
+      <div id="links"></div>
+    </main>
 
-<canvas id="particles"></canvas>
+    <script src="3contact.js"></script>
 
-<div id="particles-js"></div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-<header>
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 40 },
 
-<h1 class="title">
-  <a href="1.html" class="logo-glow" data-text="HAMADA">HAMADA</a>
-</h1>
+          size: { value: 3 },
 
-</header>
+          move: { speed: 2 },
 
-<main>
+          line_linked: {
+            enable: true,
 
-<div id="links"></div>
-
-</main>
-
-<script src="3contact.js"></script>
-
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-<script>
-
-particlesJS("particles-js", {
-
-particles: {
-
-number: { value: 40 },
-
-size: { value: 3 },
-
-move: { speed: 2 },
-
-line_linked: {
-
-enable: true,
-
-distance: 150
-
-}
-
-}
-
-});
-
-</script>
-
-</body>
+            distance: 150,
+          },
+        },
+      });
+    </script>
+  </body>
 </html>
