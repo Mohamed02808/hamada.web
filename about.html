@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عــــــــــــــن حــــــــــــــــــمــــــاده</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Segoe UI, sans-serif;
+}
+
+body{
+  background:#0f0f0f;
+  color:white;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  overflow-x:hidden;
+}
+
+/* ===== particles ===== */
+#particles-js{
+  position:fixed;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  top:0;
+  left:0;
+}
+
+/* ===== العنوان ===== */
+.title{
+  margin:40px 0;
+  font-size:40px;
+  font-weight:bold;
+  cursor:none;
+  transition:.3s;
+}
+
+.title span:first-child{
+  color:white;
+}
+
+.title span:last-child{
+  color:#ff0000;
+}
+
+.title:hover{
+  letter-spacing:3px;
+  transform:scale(1.05);
+}
+
+/* ===== العدسة ===== */
+.about-lens{
+  width:80%;
+  max-width:1000px;
+  min-height:420px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(8px);
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,0.1);
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  padding:40px;
+  position:relative;
+  overflow:visible;
+  transition:0.3s;
+  margin:0 auto; /* مركزة في منتصف الشاشة */
+}
+
+.about-lens:hover{
+  transform:scale(1.02);
+}
+
+/* ===== الافاتار ===== */
+.avatar{
+  position:absolute;
+  left:-40px; /* أبعدت الصورة شويه للخارج لتسند على العدسة */
+  bottom:0;
+}
+
+.avatar img{
+  height:420px;
+  filter:drop-shadow(-20px 20px 30px rgba(0,0,0,.7));
+  border-radius:10px;
+}
+
+/* ===== النص ===== */
+.text{
+  max-width:520px;
+  line-height:1.9;
+  padding-right:20px;
+  margin-left:60px; /* لضمان مساحة الصورة والعدسة */
+}
+
+.text h2{
+  color:#ff0000;
+  margin-bottom:15px;
+}
+
+.text p{
+  margin-bottom:10px;
+  opacity:0;
+  transform:translateY(15px);
+  animation:fade 1s forwards;
+}
+
+.text p:nth-child(2){animation-delay:.3s}
+.text p:nth-child(3){animation-delay:.6s}
+
+.en{
+  direction:ltr;
+  text-align:left;
+  opacity:.8;
+}
+
+@keyframes fade{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* ===== موبايل ===== */
+@media (max-width:900px){
+  .about-lens{
+    flex-direction:column;
+    text-align:center;
+    padding:60px 20px 20px;
+  }
+
+  .avatar{
+    position:relative;
+    left:0;
+    margin-bottom:20px;
+  }
+
+  .avatar img{
+    height:280px;
+  }
+
+  .text{
+    max-width:100%;
+    padding-right:0;
+    margin-left:0;
+  }
+}
+</style>
+
+</head>
+<body>
+
+  <link rel="stylesheet" href="2about.css">
+  <div class="cursor"></div>
+
+  <div id="particles-js"></div>
+
+<div class="title" onclick="location.href='1.html'">
+  <span>About</span> <span>HAMADA</span>
+</div>
+
+<div class="about-lens">
+
+  <div class="avatar">
+    <img src="صــــــــــور/avatar.png" alt="Hamada Avatar">
+  </div>
+
+  <div class="text">
+    <h2>من أنا</h2>
+    <p>
+      أنا محمد احمد، مهتم بتصميم المواقع والتكنولوجيا وبحب أتعلم وأطور مهاراتي في البرمجة وصناعة المشاريع الرقمية.
+    </p>
+    <p class="en">
+      I'm Mohamed Ahmed, passionate about web design, technology and creating digital experiences.
+    </p>
+  </div>
+
+</div>
+
+<script src="3about.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script>
+particlesJS("particles-js",{
+  particles:{
+    number:{value:40},
+    color:{value:"#ffffff"},
+    shape:{type:"circle"},
+    opacity:{value:1},
+    size:{value:3},
+    line_linked:{
+      enable:true,
+      distance:150,
+      color:"#ffffff",
+      opacity:1,
+      width:1
+    },
+    move:{
+      enable:true,
+      speed:2
+    }
+  }
+});
+</script>
+
+</body>
+</html>
+
+
