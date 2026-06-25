@@ -9,8 +9,7 @@ cursor.style.top=e.clientY+"px"
 
 })
 
-document.querySelectorAll(".btn").forEach(btn=>{
-
+document.querySelectorAll(".projects-btn").forEach((btn) => {
 btn.addEventListener("touchstart",()=>{
 
 btn.style.transform="scale(0.95)"

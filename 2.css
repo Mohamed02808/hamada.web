@@ -411,3 +411,16 @@ transform:translate(-50%,-50%);
 
 }
 
+/* إخفاء المؤشر المخصص على الموبايل */
+
+@media (hover: none) and (pointer: coarse) {
+
+    *{
+        cursor:auto !important;
+    }
+
+    .cursor{
+        display:none !important;
+    }
+
+}

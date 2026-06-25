@@ -194,7 +194,7 @@ main {
 
   z-index: -1;
 
-  background: #0a0a0a;
+  background: #000000;
 }
 
 .logo-glow {
@@ -217,4 +217,18 @@ main {
 
 * {
   cursor: none;
+}
+
+/* إخفاء المؤشر المخصص على الموبايل */
+
+@media (hover: none) and (pointer: coarse) {
+
+    *{
+        cursor:auto !important;
+    }
+
+    .cursor{
+        display:none !important;
+    }
+
 }
