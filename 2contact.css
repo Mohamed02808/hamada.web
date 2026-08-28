@@ -21,7 +21,6 @@ body {
 
   overflow: hidden;
 
-  cursor: none;
 }
 
 /* الاسم */
@@ -121,7 +120,6 @@ main {
 /* hover */
 
 .btn:hover {
-  cursor: none;
   transform: scale(1.1) rotate(2deg);
   background-color: #ff0000;
   color: black;
@@ -130,28 +128,6 @@ main {
 
 /* cursor */
 
-.cursor {
-  position: fixed;
-
-  width: 18px;
-
-  height: 18px;
-
-  border-radius: 50%;
-
-  background: #ff0000;
-
-  pointer-events: none;
-
-  z-index: 999;
-
-  box-shadow:
-    0 0 10px #ff0000,
-    0 0 25px #ff0000,
-    0 0 40px #ff0000;
-
-  transform: translate(-50%, -50%);
-}
 
 /* responsive */
 
@@ -215,20 +191,5 @@ main {
   transform: scale(1.1);
 }
 
-* {
-  cursor: none;
-}
 
 /* إخفاء المؤشر المخصص على الموبايل */
-
-@media (hover: none) and (pointer: coarse) {
-
-    *{
-        cursor:auto !important;
-    }
-
-    .cursor{
-        display:none !important;
-    }
-
-}

@@ -74,11 +74,20 @@
         </script>
         <script>
         let menu = document.querySelector(".menu-icon");
-        let nav = document.querySelector("nav");
+let nav = document.querySelector("nav");
 
-        menu.onclick = () => {
-        nav.classList.toggle("active");
-        };
+menu.onclick = (e) => {
+    e.stopPropagation();
+    nav.classList.toggle("active");
+};
+
+document.addEventListener("click", (e) => {
+    if (!nav.contains(e.target) && !menu.contains(e.target)) {
+        nav.classList.remove("active");
+    }
+});
+
+        
         </script>
         <section class="home" data-aos="fade-up"></section>
 
